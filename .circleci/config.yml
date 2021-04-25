@@ -9,7 +9,7 @@ jobs:
     working_directory: ~/rails-docker-nmk/src
     steps:
       - checkout:
-        path: ~/rails-docker-nmk
+          path: ~/rails-docker-nmk
       - ruby/install-deps
 
   test:
@@ -28,7 +28,7 @@ jobs:
     working_directory: ~/rails-docker-nmk/src
     steps:
       - checkout:
-        path: ~/rails-docker-nmk
+          path: ~/rails-docker-nmk
       - ruby/install-deps
       - run:
           name: Database setup
@@ -43,5 +43,5 @@ workflows:
     jobs:
       - build
       - test:
-          require:
+          requires:
             - build
