@@ -71,4 +71,4 @@ workflows:
           requires:
             - test
           filters:
-            branches: only:main
+            branches: only: main
